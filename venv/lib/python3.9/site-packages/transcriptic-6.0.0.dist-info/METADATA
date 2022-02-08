@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: transcriptic
+Version: 6.0.0
+Summary: Transcriptic CLI & Python Client Library
+Home-page: https://github.com/transcriptic/transcriptic
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: Click (>=5.1)
+Requires-Dist: requests (>=2.0)
+Requires-Dist: future (>=0.15)
+Requires-Dist: python-magic (>=0.4.13)
+Requires-Dist: Jinja2 (<3,>=2.7)
+Provides-Extra: analysis
+Requires-Dist: pandas (>=0.18) ; extra == 'analysis'
+Requires-Dist: matplotlib (>=1.4) ; extra == 'analysis'
+Requires-Dist: scipy (>=0.16) ; extra == 'analysis'
+Requires-Dist: numpy (>=1.10) ; extra == 'analysis'
+Requires-Dist: plotly (==1.9.6) ; extra == 'analysis'
+Requires-Dist: pillow (>=3.1.0) ; extra == 'analysis'
+Provides-Extra: jupyter
+Requires-Dist: pandas (>=0.18) ; extra == 'jupyter'
+
+UNKNOWN
+
+

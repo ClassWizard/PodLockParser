@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: pypaml
+Version: 1.0a1
+Summary: Protocol Activity Modeling Language
+Home-page: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: sbol3 (>=1.0b6)
+Requires-Dist: sparqlwrapper (>=1.8.5)
+Requires-Dist: python-dateutil (>=2.8.1)
+Requires-Dist: sbol-factory (==1.0a8)
+Requires-Dist: requests
+Requires-Dist: graphviz
+Requires-Dist: tyto
+Requires-Dist: numpy
+Requires-Dist: openpyxl
+Requires-Dist: autoprotocol
+Requires-Dist: transcriptic
+Requires-Dist: requests-html
+Requires-Dist: ipython
+Requires-Dist: pre-commit
+Requires-Dist: ipywidgets
+Provides-Extra: test
+Requires-Dist: nbmake ; extra == 'test'
+Requires-Dist: pytest-xdist ; extra == 'test'
+
+UNKNOWN
+

@@ -27,7 +27,7 @@ def main():
     for top_level in pods:
         if isinstance(top_level, dict):
             if len(top_level.keys()) > 0:
-                name = get_pod_name(top_level.keys()[0])
+                name = get_pod_name(list(top_level.keys())[0])
                 # print('pod:' + name)
                 add_count(name, count_dict)
 
@@ -44,7 +44,8 @@ def main():
 
     print("----------- Dependency Count -----------")
     # 排序
-    sorted_list = sorted(count_dict.items(), lambda x, y: cmp(x[1], y[1]), reverse=True)
+    sorted_list = sorted(count_dict.items(), key=lambda x: (x[1]), reverse=True)
+    # sorted_list = sorted(count_dict.items(), lambda x, y: cmp(x[1], y[1]), reverse=True)
     for tuple in sorted_list:
         print("%s: %d" % (tuple[0], tuple[1]))
     exit(1)
@@ -58,14 +59,14 @@ def parse_podfile(file_path):
         return None
     else:
         # 解析文件
-        pod_file = yaml.load(file_data)
+        pod_file = yaml.load(file_data, yaml.FullLoader)
         if isinstance(pod_file, dict) == False:
             print('Error: Podfile.lock解析失败,File:(' + file_path + '）')
             return None
-        if pod_file.has_key('DEPENDENCIES') == False:
+        if 'DEPENDENCIES' not in pod_file:
             print('Error: Podfile.lock解析失败,File:(' + file_path + '）')
             return None
-        if pod_file.has_key('PODS') == False:
+        if 'PODS' not in pod_file:
             print('Error: Podfile.lock解析失败,File:(' + file_path + '）')
             return None
         dependencies = pod_file['DEPENDENCIES']
@@ -91,14 +92,15 @@ def get_any_value(dictionary):
     if len(dictionary.keys()) <= 0:
         return None
     keys = dictionary.keys()
-    key = keys[0]
+    key = list(keys)[0]
     return dictionary[key]
 
 def get_pod_name(dependency):
-    return dependency.split(' ')[0]
+    vs = dependency.split(' ')
+    return vs[0]
 
 def add_count(key, count_dict):
-    if count_dict.has_key(key):
+    if key in count_dict:
         count = count_dict[key]
         count_dict[key] = count + 1
     else:

@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: sbol-factory
+Version: 1.0a8
+Summary: Ontology-driven data modeling
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE.txt
+Requires-Dist: sbol3 (>=1.0b6)
+Requires-Dist: rdflib (>=6.0.0)
+Requires-Dist: rdflib-jsonld (>=0.5.0)
+Requires-Dist: sparqlwrapper (>=1.8.5)
+Requires-Dist: pyshacl (>=0.13.3)
+Requires-Dist: python-dateutil (>=2.8.1)
+Requires-Dist: requests
+Requires-Dist: graphviz
+
+UNKNOWN
+

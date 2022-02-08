@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: tyto
+Version: 1.0
+Summary: Automatically generates Python symbols for ontology terms
+Home-page: https://github.com/SynBioDex/tyto
+Author: Bryan Bartley
+Author-email: bartleyba@sbolstandard.org
+License: Apache-2
+Keywords: ontologies
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: rdflib (>=5.0)
+Requires-Dist: SPARQLWrapper
+Requires-Dist: requests
+Requires-Dist: pyparsing (<3)
+
+UNKNOWN
+
